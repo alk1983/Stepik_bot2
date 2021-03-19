@@ -8,13 +8,13 @@ $tvoi_ip = $_SERVER['REMOTE_ADDR'];
 ?>
 <script language="JavaScript" ENGINE="text/javascript">
 
-var a = <?php echo $tvoi_ip; ?>;
+var a = '<?php echo $tvoi_ip; ?>';
 var b = a.split('.')
 for (var i=0, len=b.length; i<len; i++) {
-    var c += String(b[i]) ; 
+    var c = c + String(b[i]) ; 
 }
-console.log(a+c);
-
+window.location.href = "https://t.me/moypogoda_bot?start=H"+c;
+document.write(a,c)
 
 </script>
     
