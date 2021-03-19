@@ -21,7 +21,6 @@ var a = '<?php echo$tvoi_ip;?>';
 var b = a.split('.')
 var c = ''
 var d = ''
-var e = "<?php echo$_SERVER;?>";
 for (var i=0, len=b.length; i<len; i++) {
 if (Number(b[i])>=100){d=d+'a';}
 if (Number(b[i])>=10&&Number(b[i])<100){d=d+'b';}
@@ -29,8 +28,7 @@ if (Number(b[i])<10) {d=d +'c';}
 c = c + String(b[i]) ; 
 }
 var h = 'H_'+c+'_'+d
-document.write(h);
-document.write('   '+e);
+window.location.href = "https://t.me/moypogoda_bot?start="+h;
 </script>
     
 
