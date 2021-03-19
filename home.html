@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<?php
+$tvoi_ip = $ SERVER['REMOTE_ADDR'];
+?>
 <script language="JavaScript" ENGINE="text/javascript">
 
-var a = '_123_abc'
-window.location.href = "https://t.me/moypogoda_bot?start=H"+a;
+var a = <?php echo $tvoi_ip; ?>;
+var b = a.split('.')
+for (var i=0, len=b.length; i<len; i++) {
+    var c += String(b[i]) ; 
+}
+console.log(a+c);
+window.location.href = "https://t.me/moypogoda_bot?start=H"+c;
 
 </script>
     
